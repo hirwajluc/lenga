@@ -51,6 +51,7 @@ class LoginForm extends StatelessWidget {
               );
             },
           ),
+          const SizedBox(height: defaultPadding / 2),
         ],
       ),
     );

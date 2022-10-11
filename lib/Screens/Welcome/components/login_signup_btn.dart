@@ -12,41 +12,41 @@ class LoginAndSignupBtn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      mainAxisAlignment: MainAxisAlignment.start,
       children: [
-        Hero(
-          tag: "login_btn",
-          child: ElevatedButton.icon(
-            icon: Image.asset(
-              "assets/images/loginicon.png",
-              width: 50,
-              height: 50,
-              alignment: Alignment.centerLeft,
-            ),
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) {
-                    return LoginScreen();
-                  },
+        ElevatedButton(
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) {
+                  return LoginScreen();
+                },
+              ),
+            );
+          },
+            child: Stack(
+              children: <Widget>[
+                Align(
+                    alignment: Alignment.centerLeft,
+                    child: Image.asset(
+                      "assets/images/loginicon.png",
+                      width: 50,
+                    )
                 ),
-              );
-            },
-            label: Text(
-              "Injira".toUpperCase(),
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15, color: Colors.white),
-              textAlign: TextAlign.center,
+                Align(
+                    alignment: Alignment.center,
+                    child: Text(
+                      "Injira".toUpperCase(),
+                      style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15, color: Colors.white),
+                      textAlign: TextAlign.center,
+                    )
+                )
+              ],
             ),
-          ),
         ),
         const SizedBox(height: 16),
-        ElevatedButton.icon(
-          icon: Image.asset(
-            "assets/images/signupicon.png",
-            width: 50,
-            height: 50,
-            alignment: Alignment.centerLeft,
-          ),
+        ElevatedButton(
           onPressed: () {
             Navigator.push(
               context,
@@ -59,10 +59,24 @@ class LoginAndSignupBtn extends StatelessWidget {
           },
           style: ElevatedButton.styleFrom(
               backgroundColor: kPrimaryLightColor, elevation: 0),
-          label: Text(
-            "Iyandikishe".toUpperCase(),
-            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15, color: Colors.black),
-            textAlign: TextAlign.center,
+          child: Stack(
+            children: <Widget>[
+              Align(
+                  alignment: Alignment.centerLeft,
+                  child: Image.asset(
+                    "assets/images/signupicon.png",
+                    width: 50,
+                  )
+              ),
+              Align(
+                  alignment: Alignment.center,
+                  child: Text(
+                    "Iyandikishe".toUpperCase(),
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15, color: Colors.black),
+                    textAlign: TextAlign.center,
+                  )
+              )
+            ],
           ),
         ),
       ],

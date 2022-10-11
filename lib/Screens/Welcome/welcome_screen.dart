@@ -65,9 +65,10 @@ class MobileWelcomeScreen extends StatelessWidget {
         Row(
           children: [
             Container(
-              margin: const EdgeInsets.fromLTRB(0, 30, 0, 0),
+              margin: const EdgeInsets.fromLTRB(0, 20, 0, 0),
               child: Image.asset(
-                  "assets/images/uncdflogo1.png"
+                  "assets/images/uncdflogo.png",
+                width: 80,
               ),
             ),
           ],

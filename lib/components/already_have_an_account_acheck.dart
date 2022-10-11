@@ -17,7 +17,7 @@ class AlreadyHaveAnAccountCheck extends StatelessWidget {
       children: <Widget>[
         Text(
           login ? "Nta konti ufite ? " : "Usanzwe ufite konti ? ",
-          style: const TextStyle(color: kPrimaryLightColor),
+          style: const TextStyle(color: kPrimaryLightColor, fontSize: 18),
         ),
         GestureDetector(
           onTap: press as void Function()?,
@@ -26,6 +26,7 @@ class AlreadyHaveAnAccountCheck extends StatelessWidget {
             style: const TextStyle(
               color: kPrimaryLightColor,
               fontWeight: FontWeight.bold,
+              fontSize: 18
             ),
           ),
         )

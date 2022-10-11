@@ -20,6 +20,14 @@ class WelcomeImage extends StatelessWidget {
             textAlign: TextAlign.center,
           ),
         ),
+
+        Container(
+          margin: const EdgeInsets.fromLTRB(0, 5, 0, 10),
+          child: Image.asset(
+              "assets/images/lenga_logo.png",
+            width: 60,
+          ),
+        ),
         Material(
           child: InkWell(
             onTap: (){
@@ -27,12 +35,13 @@ class WelcomeImage extends StatelessWidget {
             },
             child: Image.asset(
                 "assets/images/sound_icon.png",
+              width: 70,
               ),
           ),
           color: Colors.white.withOpacity(0),
         ),
 
-        SizedBox(height: defaultPadding * 2),
+        SizedBox(height: defaultPadding),
         Row(
           children: [
             Spacer(),
@@ -40,12 +49,13 @@ class WelcomeImage extends StatelessWidget {
               flex: 8,
               child: Image.asset(
                 "assets/images/mastermoney.png",
+                width: 90,
               ),
             ),
             Spacer(),
           ],
         ),
-        SizedBox(height: defaultPadding * 2),
+        SizedBox(height: defaultPadding),
       ],
     );
   }

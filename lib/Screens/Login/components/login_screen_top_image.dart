@@ -12,6 +12,7 @@ class LoginScreenTopImage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
+        const SizedBox(height: defaultPadding / 2),
         Text(
           "INJIRA",
           style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white, fontSize: 25),

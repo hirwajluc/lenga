@@ -27,19 +27,24 @@ class SignUpForm extends StatelessWidget {
               ),
             ),
           ),
+          const SizedBox(height: defaultPadding / 2),
           Padding(
             padding: const EdgeInsets.symmetric(vertical: defaultPadding),
-            child: TextFormField(
-              textInputAction: TextInputAction.done,
-              obscureText: true,
-              cursorColor: kPrimaryColor,
+            child: DropdownButtonFormField(
               decoration: InputDecoration(
                 hintText: "Aho muherereye",
                 prefixIcon: Padding(
                   padding: const EdgeInsets.all(defaultPadding),
-                  child: Icon(Icons.lock),
+                  child: Icon(Icons.place),
                 ),
               ),
+              items: <String>["Gasabo", "Nyarugenge", "Kicukiro", "Nyanza", "Bugesera", "Rwamagana", "Gicumbi", "Musanze", "Nyagatare"].map((String value) {
+                return DropdownMenuItem<String>(
+                  value: value,
+                  child: Text(value),
+                );
+              }).toList(),
+              onChanged: (String? value) {  },
             ),
           ),
           const SizedBox(height: defaultPadding / 2),
@@ -61,6 +66,7 @@ class SignUpForm extends StatelessWidget {
               );
             },
           ),
+          const SizedBox(height: defaultPadding / 2),
         ],
       ),
     );
