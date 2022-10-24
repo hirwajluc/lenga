@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:audioplayers/audioplayers.dart';
 
 import '../../../constants.dart';
 
@@ -22,10 +23,13 @@ class SignUpScreenTopImage extends StatelessWidget {
           child: InkWell(
             onTap: (){
               print("Sound will be played");
+              final player = AudioCache();
+              player.play('audios/individualaccount.mp3');
             },
             child: Image.asset(
               "assets/images/sound_icon.png",
-              width: 70,
+              width: 100,
+              height: 100,
             ),
           ),
           color: Colors.white.withOpacity(0),

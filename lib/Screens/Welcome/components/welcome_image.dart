@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'dart:typed_data';
+import 'package:audioplayers/audioplayers.dart';
+import 'package:flutter/services.dart';
 
 import '../../../constants.dart';
 
@@ -21,24 +24,33 @@ class WelcomeImage extends StatelessWidget {
           ),
         ),
 
-        Container(
-          margin: const EdgeInsets.fromLTRB(0, 5, 0, 10),
-          child: Image.asset(
-              "assets/images/lenga_logo.png",
-            width: 60,
-          ),
-        ),
-        Material(
-          child: InkWell(
-            onTap: (){
-              print("Sound will be played");
-            },
-            child: Image.asset(
-                "assets/images/sound_icon.png",
-              width: 70,
+        Row(
+          children: [
+            Spacer(),
+            Expanded(
+              flex: 8,
+              child: Image.asset(
+                "assets/images/lenga_logo.png",
+                width: 60,
+                height: 70,
               ),
-          ),
-          color: Colors.white.withOpacity(0),
+            ),
+            Expanded(
+              flex: 8,
+              child: InkWell(
+                onTap: () {
+                  final player = AudioCache();
+                  player.play('audios/intro_screen_1.mp3');
+                },
+                child: Image.asset(
+                  "assets/images/sound_icon.png",
+                  width: 100,
+                  height: 100,
+                ),
+              ),
+            ),
+            Spacer(),
+          ],
         ),
 
         SizedBox(height: defaultPadding),

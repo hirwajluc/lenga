@@ -1,8 +1,28 @@
+import 'dart:io';
+import 'package:http/http.dart';
 import 'package:flutter/material.dart';
 import 'package:lenga/Screens/Welcome/welcome_screen.dart';
 import 'package:lenga/constants.dart';
 
-void main() => runApp(const MyApp());
+class MyHttpOverrides extends HttpOverrides{
+  @override
+  HttpClient createHttpClient(SecurityContext? context){
+    return super.createHttpClient(context)
+      ..badCertificateCallback = (X509Certificate cert, String host, int port)=> true;
+  }
+}
+
+class NavigationService {
+  static GlobalKey<NavigatorState> navigatorKey =
+  GlobalKey<NavigatorState>();
+}
+
+void main(){
+  HttpOverrides.global = new MyHttpOverrides();
+  runApp(MyApp());
+}
+
+//void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -11,6 +31,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      navigatorKey: NavigationService.navigatorKey,
       debugShowCheckedModeBanner: false,
       title: 'LENGA',
       theme: ThemeData(

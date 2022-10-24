@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:audioplayers/audioplayers.dart';
-//import 'package:assets_audio_player/assets_audio_player.dart';
 
 import '../../../constants.dart';
 
-class LoginScreenTopImage extends StatelessWidget {
-  const LoginScreenTopImage({
+class SignUpScreenTopImage extends StatelessWidget {
+  const SignUpScreenTopImage({
     Key? key,
   }) : super(key: key);
 
@@ -16,24 +15,16 @@ class LoginScreenTopImage extends StatelessWidget {
       children: [
         const SizedBox(height: defaultPadding / 2),
         Text(
-          "INJIRA",
-          style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white, fontSize: 25),
+          "Fungura Konti y'itsinda".toUpperCase(),
+          style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 25, color: Colors.white),
         ),
         SizedBox(height: defaultPadding/2),
         Material(
           child: InkWell(
             onTap: (){
-              //print("Sound will be played");
-              //AssetsAudioPlayer player = AssetsAudioPlayer();
-
-              //player.open(Audio('audios/login.mp3'),autoStart: false, showNotification: false);
-
-              //if(player.isPlaying==true) {
-                //player.stop();
-              //}
+              print("Sound will be played");
               final player = AudioCache();
-              player.play('audios/login.mp3');
-              
+              player.play('audios/groupaccount.mp3');
             },
             child: Image.asset(
               "assets/images/sound_icon.png",
@@ -43,20 +34,22 @@ class LoginScreenTopImage extends StatelessWidget {
           ),
           color: Colors.white.withOpacity(0),
         ),
-        SizedBox(height: defaultPadding * 2),
+        SizedBox(height: defaultPadding/2),
         Row(
           children: [
             const Spacer(),
             Expanded(
               flex: 8,
               child: Image.asset(
-                  "assets/images/login.png"
+                  "assets/images/groupusers.png",
+                width: 200,
+                height: 200,
               ),
             ),
             const Spacer(),
           ],
         ),
-        SizedBox(height: defaultPadding * 2),
+        SizedBox(height: defaultPadding),
       ],
     );
   }

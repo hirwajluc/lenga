@@ -1,4 +1,5 @@
 import 'dart:convert';
+//import 'dart:js';
 
 import 'package:flutter/material.dart';
 import 'package:http/http.dart';
@@ -27,10 +28,10 @@ class SignUpForm extends StatelessWidget {
             cursorColor: kPrimaryColor,
             onSaved: (name) {},
             decoration: InputDecoration(
-              hintText: "Izina ukoresha",
+              hintText: "Izina ry'itsinda",
               prefixIcon: Padding(
                 padding: const EdgeInsets.all(defaultPadding),
-                child: Icon(Icons.person),
+                child: Icon(Icons.group),
               ),
             ),
           ),
@@ -77,14 +78,14 @@ class SignUpForm extends StatelessWidget {
                 "Rubavu",
                 "Rusizi",
                 "Rutsiro",
-              ].map((String thevalue) {
+              ].map((String zValue) {
                 return DropdownMenuItem<String>(
-                  value: thevalue,
-                  child: Text(thevalue),
+                  value: zValue,
+                  child: Text(zValue),
                 );
               }).toList(),
               onChanged: (String? value) {
-                  theDropDownValue = value!;
+                theDropDownValue = value!;
               },
             ),
           ),
@@ -98,6 +99,7 @@ class SignUpForm extends StatelessWidget {
                   'last_name': izina.text.toString(),
                   'password': defaultPass,
                   'location':theDropDownValue,
+                  'account_type': 'Group',
                 });
                 Response response = await post(
                     Uri.parse('https://3.215.133.80/api/v1/users/registration/'),
@@ -202,7 +204,6 @@ class SignUpForm extends StatelessWidget {
                   print("Failed");
                   var data = jsonDecode(response.body.toString());
                   print(data);
-
                   print(response.statusCode);
                   ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                     backgroundColor: Colors.transparent,
