@@ -1,7 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.hhlinks.lenga">
+    <uses-permission android:name="android.permission.INTERNET"/>
    <application
-        android:label="lenga"
+        android:label="Lenga"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

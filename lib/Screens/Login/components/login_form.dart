@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:http/http.dart';
 import 'package:lenga/Screens/Register/choose_screen.dart';
+import 'package:lenga/Screens/Welcome/welcome_screen.dart';
 //import 'package:get/get.dart';
 
 import '../../../components/already_have_an_account_acheck.dart';
@@ -54,6 +55,8 @@ class LoginForm extends StatelessWidget {
                     print("LoggedIn Successfully");
                     var data = jsonDecode(response.body.toString());
                     print(data);
+                    logindata?.setString('token', data.toString());
+                    logindata?.setBool('loggedin', true);
                     ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                       backgroundColor: Colors.transparent,
                       behavior: SnackBarBehavior.floating,

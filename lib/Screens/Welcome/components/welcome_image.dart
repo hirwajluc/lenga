@@ -61,7 +61,8 @@ class WelcomeImage extends StatelessWidget {
               flex: 8,
               child: Image.asset(
                 "assets/images/mastermoney.png",
-                width: 90,
+                width: MediaQuery.of(context).size.width/4,
+                height: MediaQuery.of(context).size.height/4,
               ),
             ),
             Spacer(),
