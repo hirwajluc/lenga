@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2022. Developed by Hirwa Jean Luc.
+ */
+
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:lenga/Screens/Welcome/welcome_screen.dart';

@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2022. Developed by Hirwa Jean Luc.
+ */
+
 import 'package:flutter/material.dart';
 import 'package:lenga/Screens/Login/login_screen.dart';
 import 'package:lenga/Screens/Welcome/welcome_screen.dart';
@@ -22,14 +26,236 @@ class Profile extends StatelessWidget {
           children: [
             Card(
               elevation: 10,
-              child: Center(
-                child: Text('Uko mukoresha amafaranga'),
+              shape: new RoundedRectangleBorder(
+                  borderRadius: new BorderRadius.circular(15.0)
+              ),
+              color: Colors.lime,
+              margin: EdgeInsets.all(7.0),
+              child: Column(
+                children: [
+                  const Text(
+                    '1',
+                    textAlign: TextAlign.left,
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 20,
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
+                  const SizedBox(height: 5),
+                  Expanded(
+                    child: Image.asset(
+                      'assets/images/gukoreshafrw.png',
+                      fit: BoxFit.fitWidth,
+                      width: MediaQuery.of(context).size.width,
+                    ),
+                  ),
+                  const SizedBox(height: 10),
+                  const Text(
+                    'Uko mukoresha amafaranga',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 16,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  )
+                ],
               ),
             ),
             Card(
               elevation: 10,
-              child: Center(
-                child: Text('Kora ingengo y\'imari'),
+              shape: new RoundedRectangleBorder(
+                  borderRadius: new BorderRadius.circular(15.0)
+              ),
+              color: Colors.greenAccent,
+              margin: EdgeInsets.all(7.0),
+              child: Column(
+                children: [
+                  const Text(
+                    '2',
+                    textAlign: TextAlign.left,
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 20,
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
+                  const SizedBox(height: 5),
+                  Expanded(
+                    child: Image.asset(
+                      'assets/images/practiceandaction.png',
+                      fit: BoxFit.fitWidth,
+                      width: MediaQuery.of(context).size.width,
+                    ),
+                  ),
+                  const SizedBox(height: 10),
+                  const Text(
+                    'Kora ingengo y\'imari',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 16,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  )
+                ],
+              ),
+            ),
+            Card(
+              elevation: 10,
+              shape: new RoundedRectangleBorder(
+                  borderRadius: new BorderRadius.circular(15.0)
+              ),
+              color: Colors.lightGreenAccent,
+              margin: EdgeInsets.all(7.0),
+              child: Column(
+                children: [
+                  const Text(
+                    '3',
+                    textAlign: TextAlign.left,
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 20,
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
+                  const SizedBox(height: 5),
+                  Expanded(
+                    child: Image.asset(
+                      'assets/images/mastermoney.png',
+                      fit: BoxFit.fitWidth,
+                      width: MediaQuery.of(context).size.width,
+                    ),
+                  ),
+                  const SizedBox(height: 10),
+                  const Text(
+                    'Gena uburyo bwo kwizigamira',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 16,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  )
+                ],
+              ),
+            ),
+            Card(
+              elevation: 10,
+              shape: new RoundedRectangleBorder(
+                  borderRadius: new BorderRadius.circular(15.0)
+              ),
+              color: Colors.deepOrangeAccent,
+              margin: EdgeInsets.all(7.0),
+              child: Column(
+                children: [
+                  const Text(
+                    '4',
+                    textAlign: TextAlign.left,
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 20,
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
+                  const SizedBox(height: 5),
+                  Expanded(
+                    child: Image.asset(
+                      'assets/images/kwizigamiraitsinda.png',
+                      fit: BoxFit.fitWidth,
+                      width: MediaQuery.of(context).size.width,
+                    ),
+                  ),
+                  const SizedBox(height: 10),
+                  const Text(
+                    'Kwizigamira mu itsinda',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 16,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  )
+                ],
+              ),
+            ),
+            Card(
+              elevation: 10,
+              shape: new RoundedRectangleBorder(
+                  borderRadius: new BorderRadius.circular(15.0)
+              ),
+              color: Colors.lightBlueAccent,
+              margin: EdgeInsets.all(7.0),
+              child: Column(
+                children: [
+                  const Text(
+                    '5',
+                    textAlign: TextAlign.left,
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 20,
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
+                  const SizedBox(height: 5),
+                  Expanded(
+                    child: Image.asset(
+                      'assets/images/kwizigamirabank.png',
+                      fit: BoxFit.fitWidth,
+                      width: MediaQuery.of(context).size.width,
+                    ),
+                  ),
+                  const SizedBox(height: 10),
+                  const Text(
+                    'Kwizigamira mu kigo cy\'imari cg kuri telephone',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 16,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  )
+                ],
+              ),
+            ),
+            Card(
+              elevation: 10,
+              shape: new RoundedRectangleBorder(
+                borderRadius: new BorderRadius.circular(15.0)
+              ),
+              color: Colors.yellow,
+              margin: EdgeInsets.all(7.0),
+              child: Column(
+                children: [
+                  const Text(
+                    '6',
+                    textAlign: TextAlign.left,
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 20,
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
+                  const SizedBox(height: 5),
+                  Expanded(
+                    child: Image.asset(
+                      'assets/images/kwitegurainguzanyo.png',
+                      fit: BoxFit.fitWidth,
+                      width: MediaQuery.of(context).size.width,
+                    ),
+                  ),
+                  const SizedBox(height: 10),
+                  const Text(
+                    'Kwitegura kwaka inguzanyo',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 16,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  )
+                ],
               ),
             ),
           ],

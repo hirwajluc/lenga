@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2022. Developed by Hirwa Jean Luc.
+ */
+
 import 'package:flutter/material.dart';
 import 'package:audioplayers/audioplayers.dart';
 import 'package:shared_preferences/shared_preferences.dart';
