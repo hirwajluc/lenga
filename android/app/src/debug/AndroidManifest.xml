@@ -1,3 +1,7 @@
+<!--
+  ~ Copyright (c) 2022. Developed by Hirwa Jean Luc.
+  -->
+
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.hhlinks.lenga">
     <!-- The INTERNET permission is required for development. Specifically,

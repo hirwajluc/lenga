@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2022. Developed by Hirwa Jean Luc.
+ */
+
 import 'dart:io';
 import 'package:http/http.dart';
 import 'package:flutter/material.dart';
