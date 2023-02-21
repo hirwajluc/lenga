@@ -28,7 +28,8 @@ class SignUpScreenTopImage extends StatelessWidget {
             onTap: (){
               print("Sound will be played");
               final player = AudioCache();
-              player.play('audios/groupaccount.mp3');
+              //player.play('audios/groupaccount.mp3');
+              audioPlayer.play(AssetSource('audios/groupaccount.mp3'));
             },
             child: Image.asset(
               "assets/images/sound_icon.png",

@@ -44,7 +44,8 @@ class WelcomeImage extends StatelessWidget {
               child: InkWell(
                 onTap: () {
                   final player = AudioCache();
-                  player.play('audios/intro_screen_1.mp3');
+                  //player.play('audios/intro_screen_1.mp3');
+                  audioPlayer.play(AssetSource('audios/intro_screen_1.mp3'));
                 },
                 child: Image.asset(
                   "assets/images/sound_icon.png",

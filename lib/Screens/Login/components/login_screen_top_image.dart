@@ -36,7 +36,8 @@ class LoginScreenTopImage extends StatelessWidget {
                 //player.stop();
               //}
               final player = AudioCache();
-              player.play('audios/login.mp3');
+              //player.play('audios/login.mp3');
+              audioPlayer.play(AssetSource('audios/login.mp3'));
               
             },
             child: Image.asset(

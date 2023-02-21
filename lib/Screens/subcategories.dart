@@ -3,12 +3,29 @@
  */
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
+import 'package:lenga/Screens/step2quiz1.dart';
+import 'package:lenga/Screens/step4quiz1.dart';
+import 'package:lenga/Screens/step1video1.dart';
+import 'package:lenga/Screens/step1video2.dart';
 import 'profile.dart';
+import 'package:lenga/constants.dart';
 
-class Subcategories extends StatelessWidget {
+class Subcategories extends StatefulWidget{
+  @override
+  _SubCategoriesState createState() => _SubCategoriesState();
+}
+
+class _SubCategoriesState extends State<Subcategories> {
 
   @override
   Widget build(BuildContext context) {
+    var size = MediaQuery.of(context).size;
+    final double itemHeight = (size.height) / 2.3;
+    final double itemWidth = (size.width) / 2;
+
+    //AudioPlayer audioPlayer = AudioPlayer(); // AudioPlayer
+    bool playing = false;
+
     return Scaffold(
       appBar: AppBar(
         title: Text("Uko mukoresha amafaranga"),
@@ -16,7 +33,8 @@ class Subcategories extends StatelessWidget {
       drawer: const NavigationDrawer(),
       body: Container(
         child: GridView(
-          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2, ),
+          shrinkWrap: false,
+          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2, childAspectRatio: (itemWidth / itemHeight)),
           children: [
             Card(
               elevation: 10,
@@ -43,9 +61,17 @@ class Subcategories extends StatelessWidget {
                         Expanded(
                           child: InkWell(
                             onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) {
+                                    return Step1Video1();
+                                  },
+                                ),
+                              );
                             },
                             child: Image.asset(
-                              'assets/images/gukoreshafrw.png',
+                              'assets/images/cat_1_lesson_1.png',
                               fit: BoxFit.fitWidth,
                               width: MediaQuery.of(context).size.width,
                             ),
@@ -70,12 +96,13 @@ class Subcategories extends StatelessWidget {
                     child: InkWell(
                       onTap: () {
                         final player = AudioCache();
-                        player.play('audios/intro_screen_1.mp3');
+                        //player.play('audios/cat_1_lesson_1.mp3');
+                        audioPlayer.play(AssetSource('audios/cat_1_lesson_1.mp3'));
                       },
                       child: Image.asset(
                         "assets/images/sound_icon.png",
-                        width: 40,
-                        height: 40,
+                        width: soundIconSize,
+                        height: soundIconSize,
                       ),
                     ),
                   ),
@@ -107,9 +134,17 @@ class Subcategories extends StatelessWidget {
                         Expanded(
                           child: InkWell(
                             onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) {
+                                    return Step2Quiz1();
+                                  },
+                                ),
+                              );
                             },
                             child: Image.asset(
-                              'assets/images/practiceandaction.png',
+                              'assets/images/gukoreshafrw.png',
                               fit: BoxFit.fitWidth,
                               width: MediaQuery.of(context).size.width,
                             ),
@@ -117,7 +152,7 @@ class Subcategories extends StatelessWidget {
                         ),
                         const SizedBox(height: 10),
                         const Text(
-                          'Uko amaafaranga yinjira n\'uko asohoka',
+                          'Uko amafaranga yinjira n\'uko asohoka',
                           textAlign: TextAlign.center,
                           style: TextStyle(
                             color: Colors.black,
@@ -134,12 +169,13 @@ class Subcategories extends StatelessWidget {
                     child: InkWell(
                       onTap: () {
                         final player = AudioCache();
-                        player.play('audios/intro_screen_1.mp3');
+                        //player.play('audios/cat_1_lesson_2.mp3');
+                        audioPlayer.play(AssetSource('audios/cat_1_lesson_2.mp3'));
                       },
                       child: Image.asset(
                         "assets/images/sound_icon.png",
-                        width: 40,
-                        height: 40,
+                        width: soundIconSize,
+                        height: soundIconSize,
                       ),
                     ),
                   ),
@@ -171,9 +207,17 @@ class Subcategories extends StatelessWidget {
                         Expanded(
                           child: InkWell(
                             onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) {
+                                    return Step1Video2();
+                                  },
+                                ),
+                              );
                             },
                             child: Image.asset(
-                              'assets/images/mastermoney.png',
+                              'assets/images/cat_1_lesson_3.png',
                               fit: BoxFit.fitWidth,
                               width: MediaQuery.of(context).size.width,
                             ),
@@ -198,12 +242,13 @@ class Subcategories extends StatelessWidget {
                     child: InkWell(
                       onTap: () {
                         final player = AudioCache();
-                        player.play('audios/intro_screen_1.mp3');
+                        //player.play('audios/cat_1_lesson_3.mp3');
+                        audioPlayer.play(AssetSource('audios/cat_1_lesson_3.mp3'));
                       },
                       child: Image.asset(
                         "assets/images/sound_icon.png",
-                        width: 40,
-                        height: 40,
+                        width: soundIconSize,
+                        height: soundIconSize,
                       ),
                     ),
                   ),
@@ -235,9 +280,17 @@ class Subcategories extends StatelessWidget {
                         Expanded(
                           child: InkWell(
                             onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) {
+                                    return Step4Quiz1();
+                                  },
+                                ),
+                              );
                             },
                             child: Image.asset(
-                              'assets/images/kwizigamiraitsinda.png',
+                              'assets/images/cat_1_lesson_4.png',
                               fit: BoxFit.fitWidth,
                               width: MediaQuery.of(context).size.width,
                             ),
@@ -262,12 +315,13 @@ class Subcategories extends StatelessWidget {
                     child: InkWell(
                       onTap: () {
                         final player = AudioCache();
-                        player.play('audios/intro_screen_1.mp3');
+                        //player.play('audios/cat_1_lesson_4.mp3');
+                        audioPlayer.play(AssetSource('audios/cat_1_lesson_4.mp3'));
                       },
                       child: Image.asset(
                         "assets/images/sound_icon.png",
-                        width: 40,
-                        height: 40,
+                        width: soundIconSize,
+                        height: soundIconSize,
                       ),
                     ),
                   ),
@@ -279,5 +333,6 @@ class Subcategories extends StatelessWidget {
       ),
     );
   }
+
 
 }

@@ -10,6 +10,11 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:lenga/constants.dart';
 
 import 'subcategories.dart';
+import 'subcategories2.dart';
+import 'subcategories3.dart';
+import 'subcategories4.dart';
+import 'subcategories5.dart';
+import 'subcategories6.dart';
 
 //void main() => runApp(Profile('',));
 class Profile extends StatelessWidget {
@@ -94,12 +99,13 @@ class Profile extends StatelessWidget {
                       child: InkWell(
                         onTap: () {
                           final player = AudioCache();
-                          player.play('audios/intro_screen_1.mp3');
+                          //player.play('audios/home_1.mp3');
+                          audioPlayer.play(AssetSource('audios/home_1.mp3'));
                         },
                         child: Image.asset(
                           "assets/images/sound_icon.png",
-                          width: 40,
-                          height: 40,
+                          width: soundIconSize,
+                          height: soundIconSize,
                         ),
                       ),
                     ),
@@ -131,6 +137,14 @@ class Profile extends StatelessWidget {
                           Expanded(
                             child: InkWell(
                               onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) {
+                                      return Subcategories2();
+                                    },
+                                  ),
+                                );
                               },
                               child: Image.asset(
                                 'assets/images/practiceandaction.png',
@@ -158,12 +172,13 @@ class Profile extends StatelessWidget {
                       child: InkWell(
                         onTap: () {
                           final player = AudioCache();
-                          player.play('audios/intro_screen_1.mp3');
+                          //player.play('audios/home_2.mp3');
+                          audioPlayer.play(AssetSource('audios/home_2.mp3'));
                         },
                         child: Image.asset(
                           "assets/images/sound_icon.png",
-                          width: 40,
-                          height: 40,
+                          width: soundIconSize,
+                          height: soundIconSize,
                         ),
                       ),
                     ),
@@ -195,6 +210,14 @@ class Profile extends StatelessWidget {
                           Expanded(
                             child: InkWell(
                               onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) {
+                                      return Subcategories3();
+                                    },
+                                  ),
+                                );
                               },
                               child: Image.asset(
                                 'assets/images/mastermoney.png',
@@ -222,12 +245,13 @@ class Profile extends StatelessWidget {
                       child: InkWell(
                         onTap: () {
                           final player = AudioCache();
-                          player.play('audios/intro_screen_1.mp3');
+                          //player.play('audios/home_3.mp3');
+                          audioPlayer.play(AssetSource('audios/home_3.mp3'));
                         },
                         child: Image.asset(
                           "assets/images/sound_icon.png",
-                          width: 40,
-                          height: 40,
+                          width: soundIconSize,
+                          height: soundIconSize,
                         ),
                       ),
                     ),
@@ -259,6 +283,14 @@ class Profile extends StatelessWidget {
                           Expanded(
                             child: InkWell(
                               onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) {
+                                      return Subcategories4();
+                                    },
+                                  ),
+                                );
                               },
                               child: Image.asset(
                                 'assets/images/kwizigamiraitsinda.png',
@@ -286,12 +318,13 @@ class Profile extends StatelessWidget {
                       child: InkWell(
                         onTap: () {
                           final player = AudioCache();
-                          player.play('audios/intro_screen_1.mp3');
+                          //player.play('audios/home_4.mp3');
+                          audioPlayer.play(AssetSource('audios/home_4.mp3'));
                         },
                         child: Image.asset(
                           "assets/images/sound_icon.png",
-                          width: 40,
-                          height: 40,
+                          width: soundIconSize,
+                          height: soundIconSize,
                         ),
                       ),
                     ),
@@ -323,6 +356,14 @@ class Profile extends StatelessWidget {
                           Expanded(
                             child: InkWell(
                               onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) {
+                                      return Subcategories5();
+                                    },
+                                  ),
+                                );
                               },
                               child: Image.asset(
                                 'assets/images/kwizigamirabank.png',
@@ -350,12 +391,13 @@ class Profile extends StatelessWidget {
                       child: InkWell(
                         onTap: () {
                           final player = AudioCache();
-                          player.play('audios/intro_screen_1.mp3');
+                          //player.play('audios/home_5.mp3');
+                          audioPlayer.play(AssetSource('audios/home_5.mp3'));
                         },
                         child: Image.asset(
                           "assets/images/sound_icon.png",
-                          width: 40,
-                          height: 40,
+                          width: soundIconSize,
+                          height: soundIconSize,
                         ),
                       ),
                     ),
@@ -387,6 +429,14 @@ class Profile extends StatelessWidget {
                           Expanded(
                             child: InkWell(
                               onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) {
+                                      return Subcategories6();
+                                    },
+                                  ),
+                                );
                               },
                               child: Image.asset(
                                 'assets/images/kwitegurainguzanyo.png',
@@ -414,12 +464,13 @@ class Profile extends StatelessWidget {
                       child: InkWell(
                         onTap: () {
                           final player = AudioCache();
-                          player.play('audios/intro_screen_1.mp3');
+                          //player.play('audios/home_6.mp3');
+                          audioPlayer.play(AssetSource('audios/home_6.mp3'));
                         },
                         child: Image.asset(
                           "assets/images/sound_icon.png",
-                          width: 40,
-                          height: 40,
+                          width: soundIconSize,
+                          height: soundIconSize,
                         ),
                       ),
                     ),

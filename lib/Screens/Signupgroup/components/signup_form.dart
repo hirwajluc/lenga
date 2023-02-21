@@ -106,7 +106,7 @@ class SignUpForm extends StatelessWidget {
                   'account_type': 'Group',
                 });
                 Response response = await post(
-                    Uri.parse('https://3.215.133.80/api/v1/users/registration/'),
+                    Uri.parse('https://34.239.165.101/api/v1/users/registration/'),
                     body: thedata,
                     headers: {
                       'content-type' : 'application/json',

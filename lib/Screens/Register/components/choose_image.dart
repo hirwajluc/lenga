@@ -28,7 +28,8 @@ class ChooseImage extends StatelessWidget {
                 onTap: (){
                   print("Sound will be played");
                   final player = AudioCache();
-                  player.play('audios/individualgroup.mp3');
+                  //player.play('audios/individualgroup.mp3');
+                  audioPlayer.play(AssetSource('audios/individualgroup.mp3'));
                 },
                 child: Image.asset(
                   "assets/images/sound_icon.png",
