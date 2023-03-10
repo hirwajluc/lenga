@@ -20,7 +20,7 @@ class _SubCategoriesState extends State<Subcategories> {
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
-    final double itemHeight = (size.height) / 2.3;
+    final double itemHeight = (size.height) / 2.2;
     final double itemWidth = (size.width) / 2;
 
     //AudioPlayer audioPlayer = AudioPlayer(); // AudioPlayer
@@ -53,7 +53,7 @@ class _SubCategoriesState extends State<Subcategories> {
                           textAlign: TextAlign.left,
                           style: TextStyle(
                             color: Colors.black,
-                            fontSize: 15,
+                            fontSize: defaultFontSize,
                             fontWeight: FontWeight.w700,
                           ),
                         ),
@@ -83,7 +83,7 @@ class _SubCategoriesState extends State<Subcategories> {
                           textAlign: TextAlign.center,
                           style: TextStyle(
                             color: Colors.black,
-                            fontSize: 16,
+                            fontSize: defaultFontSize,
                             fontWeight: FontWeight.w600,
                           ),
                         ),
@@ -126,7 +126,7 @@ class _SubCategoriesState extends State<Subcategories> {
                           textAlign: TextAlign.left,
                           style: TextStyle(
                             color: Colors.black,
-                            fontSize: 15,
+                            fontSize: defaultFontSize,
                             fontWeight: FontWeight.w700,
                           ),
                         ),
@@ -156,7 +156,7 @@ class _SubCategoriesState extends State<Subcategories> {
                           textAlign: TextAlign.center,
                           style: TextStyle(
                             color: Colors.black,
-                            fontSize: 16,
+                            fontSize: defaultFontSize,
                             fontWeight: FontWeight.w600,
                           ),
                         ),
@@ -199,7 +199,7 @@ class _SubCategoriesState extends State<Subcategories> {
                           textAlign: TextAlign.left,
                           style: TextStyle(
                             color: Colors.black,
-                            fontSize: 15,
+                            fontSize: defaultFontSize,
                             fontWeight: FontWeight.w700,
                           ),
                         ),
@@ -229,7 +229,7 @@ class _SubCategoriesState extends State<Subcategories> {
                           textAlign: TextAlign.center,
                           style: TextStyle(
                             color: Colors.black,
-                            fontSize: 16,
+                            fontSize: defaultFontSize,
                             fontWeight: FontWeight.w600,
                           ),
                         ),
@@ -272,7 +272,7 @@ class _SubCategoriesState extends State<Subcategories> {
                           textAlign: TextAlign.left,
                           style: TextStyle(
                             color: Colors.black,
-                            fontSize: 15,
+                            fontSize: defaultFontSize,
                             fontWeight: FontWeight.w700,
                           ),
                         ),
@@ -302,7 +302,7 @@ class _SubCategoriesState extends State<Subcategories> {
                           textAlign: TextAlign.center,
                           style: TextStyle(
                             color: Colors.black,
-                            fontSize: 16,
+                            fontSize: defaultFontSize,
                             fontWeight: FontWeight.w600,
                           ),
                         ),

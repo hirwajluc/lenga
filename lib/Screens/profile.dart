@@ -24,6 +24,9 @@ class Profile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     int count;
+    var size = MediaQuery.of(context).size;
+    final double itemHeight = (size.height) / 3.3;
+    final double itemWidth = (size.width) / 2;
 
     if (MediaQuery.of(context).orientation == Orientation.landscape)
       count = 3;
@@ -37,7 +40,7 @@ class Profile extends StatelessWidget {
       drawer: const NavigationDrawer(),
       body: Container(
         child: GridView(
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: count),
+            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: count, childAspectRatio: (itemWidth / itemHeight)),
             children: [
               Card(
                 elevation: 10,
@@ -86,7 +89,7 @@ class Profile extends StatelessWidget {
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         color: Colors.black,
-                        fontSize: 16,
+                        fontSize: defaultFontSize,
                         fontWeight: FontWeight.w600,
                       ),
                     ),
@@ -159,7 +162,7 @@ class Profile extends StatelessWidget {
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               color: Colors.black,
-                              fontSize: 16,
+                              fontSize: defaultFontSize,
                               fontWeight: FontWeight.w600,
                             ),
                           ),
@@ -232,7 +235,7 @@ class Profile extends StatelessWidget {
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               color: Colors.black,
-                              fontSize: 16,
+                              fontSize: defaultFontSize,
                               fontWeight: FontWeight.w600,
                             ),
                           ),
@@ -305,7 +308,7 @@ class Profile extends StatelessWidget {
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               color: Colors.black,
-                              fontSize: 16,
+                              fontSize: defaultFontSize,
                               fontWeight: FontWeight.w600,
                             ),
                           ),
@@ -378,7 +381,7 @@ class Profile extends StatelessWidget {
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               color: Colors.black,
-                              fontSize: 16,
+                              fontSize: defaultFontSize,
                               fontWeight: FontWeight.w600,
                             ),
                           ),
@@ -451,7 +454,7 @@ class Profile extends StatelessWidget {
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               color: Colors.black,
-                              fontSize: 16,
+                              fontSize: defaultFontSize,
                               fontWeight: FontWeight.w600,
                             ),
                           ),

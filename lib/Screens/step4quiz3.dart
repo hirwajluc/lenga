@@ -10,15 +10,16 @@ import 'package:lenga/Screens/step1video2.dart';
 import 'package:lenga/Screens/step2quiz1.dart';
 import 'package:lenga/Screens/step2quiz3.dart';
 import 'package:lenga/Screens/step4quiz2.dart';
+import 'package:lenga/Screens/step4quiz4.dart';
 import 'package:lenga/constants.dart';
 import 'profile.dart';
 
-class Step4Quiz1 extends StatefulWidget{
+class Step4Quiz3 extends StatefulWidget{
   @override
-  _Step4Quiz1State createState() => _Step4Quiz1State();
+  _Step4Quiz3State createState() => _Step4Quiz3State();
 }
 
-class _Step4Quiz1State extends State<Step4Quiz1> {
+class _Step4Quiz3State extends State<Step4Quiz3> {
 
   @override
   Widget build(BuildContext context) {
@@ -89,7 +90,7 @@ class _Step4Quiz1State extends State<Step4Quiz1> {
                 ],
               ),
               Container(
-                height: 80,
+                height: 70,
                 width: size.width,
                 color: Color.fromRGBO(217, 184, 184, 1),
                 padding: const EdgeInsets.fromLTRB(5,5,5,5),
@@ -113,7 +114,7 @@ class _Step4Quiz1State extends State<Step4Quiz1> {
                               const SizedBox(height: 5),
                               Expanded(
                                 child: Image.asset(
-                                  'assets/images/lotion.png',
+                                  'assets/images/coca.png',
                                   fit: BoxFit.contain,
                                   width: MediaQuery.of(context).size.width,
                                   alignment: Alignment.center,
@@ -197,7 +198,14 @@ class _Step4Quiz1State extends State<Step4Quiz1> {
                     //padding: const EdgeInsets.fromLTRB(50,8,0,0),
                     child: InkWell(
                       onTap: () {
-
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) {
+                              return Step4Quiz2();
+                            },
+                          ),
+                        );
                       },
                       child: Image.asset(
                         "assets/icons/previous.png",
@@ -237,7 +245,7 @@ class _Step4Quiz1State extends State<Step4Quiz1> {
                           context,
                           MaterialPageRoute(
                             builder: (context) {
-                              return Step4Quiz2();
+                              return Step4Quiz4();
                             },
                           ),
                         );

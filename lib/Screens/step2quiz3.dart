@@ -7,18 +7,17 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:lenga/Screens/step1video1.dart';
 import 'package:lenga/Screens/step1video2.dart';
-import 'package:lenga/Screens/step2quiz1.dart';
-import 'package:lenga/Screens/step2quiz3.dart';
-import 'package:lenga/Screens/step4quiz2.dart';
+import 'package:lenga/Screens/step2quiz2.dart';
+import 'package:lenga/Screens/step2quiz4.dart';
 import 'package:lenga/constants.dart';
 import 'profile.dart';
 
-class Step4Quiz1 extends StatefulWidget{
+class Step2Quiz3 extends StatefulWidget{
   @override
-  _Step4Quiz1State createState() => _Step4Quiz1State();
+  _Step2Quiz3State createState() => _Step2Quiz3State();
 }
 
-class _Step4Quiz1State extends State<Step4Quiz1> {
+class _Step2Quiz3State extends State<Step2Quiz3> {
 
   @override
   Widget build(BuildContext context) {
@@ -41,12 +40,11 @@ class _Step4Quiz1State extends State<Step4Quiz1> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text("Ese uyakoresha mu byo ukeneye cg \nni mu byo wifuza?",
+        title: Text("Uko amafaranga yinjira nuko asohoka",
             style: TextStyle(fontSize: 15)),
       ),
       drawer: const NavigationDrawer(),
       body: Container(
-        width: size.width,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
@@ -61,10 +59,10 @@ class _Step4Quiz1State extends State<Step4Quiz1> {
                       child: Row(
                         children: [
                           Text(
-                            '4. Ese uyakoresha mu byo ukeneye \ncg ni mu byo wifuza?',
+                            '2. Amafaranga yinjira',
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                                fontSize: defaultFontSize,
+                                fontSize: 15,
                                 fontWeight: FontWeight.bold
                             ),
                           ),
@@ -72,7 +70,7 @@ class _Step4Quiz1State extends State<Step4Quiz1> {
                             onTap: () {
                               final player = AudioCache();
                               //player.play('audios/home_6.mp3');
-                              audioPlayer.play(AssetSource('audios/home_6.mp3'));
+                              audioPlayer.play(AssetSource('audios/amafaranga_yinjira.mp3'));
                             },
                             child: Image.asset(
                               "assets/images/sound_icon.png",
@@ -89,12 +87,12 @@ class _Step4Quiz1State extends State<Step4Quiz1> {
                 ],
               ),
               Container(
-                height: 80,
+                height: 70,
                 width: size.width,
                 color: Color.fromRGBO(217, 184, 184, 1),
                 padding: const EdgeInsets.fromLTRB(5,5,5,5),
                 child: Text(
-                  "Kanda kuri buto y'icyatsi niba wumva ikintu utekereje gikenewe. Kanda kuri buto itukura niba wumva ikintu utekereje ari icyo wifuza gusa.",
+                  "Shyira buri kintu cyinjiza amafaranga mu cyiciro ubona ko bihuye",
                   textAlign: TextAlign.left,
                   style: TextStyle(
                       fontSize: defaultFontSize,
@@ -108,20 +106,19 @@ class _Step4Quiz1State extends State<Step4Quiz1> {
                     Stack(
                       children: [
                         Container(
-                          child: Column(
-                            children: [
-                              const SizedBox(height: 5),
-                              Expanded(
-                                child: Image.asset(
-                                  'assets/images/lotion.png',
-                                  fit: BoxFit.contain,
-                                  width: MediaQuery.of(context).size.width,
-                                  alignment: Alignment.center,
+                            child: Column(
+                              children: [
+                                const SizedBox(height: 5),
+                                Expanded(
+                                  child: Image.asset(
+                                    'assets/images/guhinga.png',
+                                    fit: BoxFit.contain,
+                                    width: MediaQuery.of(context).size.width,
+                                  ),
                                 ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
-                        ),
 
                         Row(
                           children: [
@@ -151,33 +148,44 @@ class _Step4Quiz1State extends State<Step4Quiz1> {
               ),
               Expanded(
                 child: Container(
-                  height: 100,
+                  height: 120,
                   width: size.width,
                   alignment: Alignment.topCenter,
                   //color: Color.fromRGBO(245, 166, 154, 1),
-                  padding: const EdgeInsets.fromLTRB(0,8,0,0),
+                  //padding: const EdgeInsets.fromLTRB(0,8,0,0),
                   child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Padding(
-                        padding: const EdgeInsets.only(left: 10.0),
+                        padding: const EdgeInsets.all(5.0),
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(12),
                           child: Image.asset(
-                            "assets/images/ibyowifuza.png",
-                            fit: BoxFit.cover,
+                            "assets/images/burigihe.png",
+                            fit: BoxFit.contain,
                             height: iconsReason,
                             width: iconsReason,
                           ),
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(left: 10.0),
+                        padding: const EdgeInsets.all(5.0),
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(12),
                           child: Image.asset(
-                            "assets/images/ibyoukeneye.png",
-                            fit: BoxFit.cover,
+                            "assets/images/rimwenarimwe.png",
+                            fit: BoxFit.contain,
+                            height: iconsReason,
+                            width: iconsReason,
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(5.0),
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(12),
+                          child: Image.asset(
+                            "assets/images/ibihembwe.png",
+                            fit: BoxFit.contain,
                             height: iconsReason,
                             width: iconsReason,
                           ),
@@ -197,7 +205,14 @@ class _Step4Quiz1State extends State<Step4Quiz1> {
                     //padding: const EdgeInsets.fromLTRB(50,8,0,0),
                     child: InkWell(
                       onTap: () {
-
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) {
+                              return Step2Quiz2();
+                            },
+                          ),
+                        );
                       },
                       child: Image.asset(
                         "assets/icons/previous.png",
@@ -237,7 +252,7 @@ class _Step4Quiz1State extends State<Step4Quiz1> {
                           context,
                           MaterialPageRoute(
                             builder: (context) {
-                              return Step4Quiz2();
+                              return Step2Quiz4();
                             },
                           ),
                         );

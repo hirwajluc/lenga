@@ -9,16 +9,17 @@ import 'package:lenga/Screens/step1video1.dart';
 import 'package:lenga/Screens/step1video2.dart';
 import 'package:lenga/Screens/step2quiz1.dart';
 import 'package:lenga/Screens/step2quiz3.dart';
-import 'package:lenga/Screens/step4quiz2.dart';
+import 'package:lenga/Screens/step4quiz6.dart';
+import 'package:lenga/Screens/step4quiz8.dart';
 import 'package:lenga/constants.dart';
 import 'profile.dart';
 
-class Step4Quiz1 extends StatefulWidget{
+class Step4Quiz7 extends StatefulWidget{
   @override
-  _Step4Quiz1State createState() => _Step4Quiz1State();
+  _Step4Quiz7State createState() => _Step4Quiz7State();
 }
 
-class _Step4Quiz1State extends State<Step4Quiz1> {
+class _Step4Quiz7State extends State<Step4Quiz7> {
 
   @override
   Widget build(BuildContext context) {
@@ -64,7 +65,7 @@ class _Step4Quiz1State extends State<Step4Quiz1> {
                             '4. Ese uyakoresha mu byo ukeneye \ncg ni mu byo wifuza?',
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                                fontSize: defaultFontSize,
+                                fontSize: 15,
                                 fontWeight: FontWeight.bold
                             ),
                           ),
@@ -89,15 +90,14 @@ class _Step4Quiz1State extends State<Step4Quiz1> {
                 ],
               ),
               Container(
-                height: 80,
-                width: size.width,
+                height: 70,
                 color: Color.fromRGBO(217, 184, 184, 1),
                 padding: const EdgeInsets.fromLTRB(5,5,5,5),
                 child: Text(
                   "Kanda kuri buto y'icyatsi niba wumva ikintu utekereje gikenewe. Kanda kuri buto itukura niba wumva ikintu utekereje ari icyo wifuza gusa.",
-                  textAlign: TextAlign.left,
+                  textAlign: TextAlign.center,
                   style: TextStyle(
-                      fontSize: defaultFontSize,
+                      fontSize: 16,
                       fontWeight: FontWeight.bold
                   ),
                 ),
@@ -113,7 +113,7 @@ class _Step4Quiz1State extends State<Step4Quiz1> {
                               const SizedBox(height: 5),
                               Expanded(
                                 child: Image.asset(
-                                  'assets/images/lotion.png',
+                                  'assets/images/school.png',
                                   fit: BoxFit.contain,
                                   width: MediaQuery.of(context).size.width,
                                   alignment: Alignment.center,
@@ -153,7 +153,7 @@ class _Step4Quiz1State extends State<Step4Quiz1> {
                 child: Container(
                   height: 100,
                   width: size.width,
-                  alignment: Alignment.topCenter,
+                  alignment: Alignment.center,
                   //color: Color.fromRGBO(245, 166, 154, 1),
                   padding: const EdgeInsets.fromLTRB(0,8,0,0),
                   child: Row(
@@ -197,7 +197,14 @@ class _Step4Quiz1State extends State<Step4Quiz1> {
                     //padding: const EdgeInsets.fromLTRB(50,8,0,0),
                     child: InkWell(
                       onTap: () {
-
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) {
+                              return Step4Quiz6();
+                            },
+                          ),
+                        );
                       },
                       child: Image.asset(
                         "assets/icons/previous.png",
@@ -237,7 +244,7 @@ class _Step4Quiz1State extends State<Step4Quiz1> {
                           context,
                           MaterialPageRoute(
                             builder: (context) {
-                              return Step4Quiz2();
+                              return Step4Quiz8();
                             },
                           ),
                         );

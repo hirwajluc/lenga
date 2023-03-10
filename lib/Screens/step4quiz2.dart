@@ -9,16 +9,18 @@ import 'package:lenga/Screens/step1video1.dart';
 import 'package:lenga/Screens/step1video2.dart';
 import 'package:lenga/Screens/step2quiz1.dart';
 import 'package:lenga/Screens/step2quiz3.dart';
+import 'package:lenga/Screens/step4quiz1.dart';
 import 'package:lenga/Screens/step4quiz2.dart';
+import 'package:lenga/Screens/step4quiz3.dart';
 import 'package:lenga/constants.dart';
 import 'profile.dart';
 
-class Step4Quiz1 extends StatefulWidget{
+class Step4Quiz2 extends StatefulWidget{
   @override
-  _Step4Quiz1State createState() => _Step4Quiz1State();
+  _Step4Quiz2State createState() => _Step4Quiz2State();
 }
 
-class _Step4Quiz1State extends State<Step4Quiz1> {
+class _Step4Quiz2State extends State<Step4Quiz2> {
 
   @override
   Widget build(BuildContext context) {
@@ -46,7 +48,7 @@ class _Step4Quiz1State extends State<Step4Quiz1> {
       ),
       drawer: const NavigationDrawer(),
       body: Container(
-        width: size.width,
+          width: size.width,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
@@ -89,7 +91,7 @@ class _Step4Quiz1State extends State<Step4Quiz1> {
                 ],
               ),
               Container(
-                height: 80,
+                height: 70,
                 width: size.width,
                 color: Color.fromRGBO(217, 184, 184, 1),
                 padding: const EdgeInsets.fromLTRB(5,5,5,5),
@@ -113,7 +115,7 @@ class _Step4Quiz1State extends State<Step4Quiz1> {
                               const SizedBox(height: 5),
                               Expanded(
                                 child: Image.asset(
-                                  'assets/images/lotion.png',
+                                  'assets/images/family.png',
                                   fit: BoxFit.contain,
                                   width: MediaQuery.of(context).size.width,
                                   alignment: Alignment.center,
@@ -197,7 +199,14 @@ class _Step4Quiz1State extends State<Step4Quiz1> {
                     //padding: const EdgeInsets.fromLTRB(50,8,0,0),
                     child: InkWell(
                       onTap: () {
-
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) {
+                              return Step4Quiz1();
+                            },
+                          ),
+                        );
                       },
                       child: Image.asset(
                         "assets/icons/previous.png",
@@ -237,7 +246,7 @@ class _Step4Quiz1State extends State<Step4Quiz1> {
                           context,
                           MaterialPageRoute(
                             builder: (context) {
-                              return Step4Quiz2();
+                              return Step4Quiz3();
                             },
                           ),
                         );

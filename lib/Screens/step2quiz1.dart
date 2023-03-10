@@ -5,6 +5,7 @@
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:lenga/Screens/step2quiz2.dart';
 import 'package:lenga/constants.dart';
 import 'profile.dart';
 
@@ -50,7 +51,7 @@ class _Step2Quiz1State extends State<Step2Quiz1> {
                   Container(
                     height: 70,
                     width: size.width,
-                    color: Color.fromRGBO(255, 246, 30, 1),
+                    color: Color.fromRGBO(217, 184, 184, 1),
                     padding: const EdgeInsets.fromLTRB(8,8,8,8),
                     child: Row(
                       children: [
@@ -58,21 +59,25 @@ class _Step2Quiz1State extends State<Step2Quiz1> {
                           '1. Ni ibihe bintu byinjiza amafaranga\n n’ibigendaho amafaranga?',
                           textAlign: TextAlign.center,
                           style: TextStyle(
-                              fontSize: 15,
+                              fontSize: defaultFontSize,
                               fontWeight: FontWeight.bold
                           ),
                         ),
-                        InkWell(
-                          onTap: () {
-                            final player = AudioCache();
-                            //player.play('audios/home_6.mp3');
-                            audioPlayer.play(AssetSource('audios/home_6.mp3'));
-                          },
-                          child: Image.asset(
-                            "assets/images/sound_icon.png",
-                            width: soundIconSize,
-                            height: soundIconSize,
-                            fit: BoxFit.contain,
+                        Align(
+                          alignment: Alignment.topRight,
+                          child: InkWell(
+                            onTap: () {
+                              final player = AudioCache();
+                              //player.play('audios/home_6.mp3');
+                              audioPlayer.play(AssetSource('audios/cat_1_sub_1.mp3'));
+                            },
+                            child: Image.asset(
+                              "assets/images/sound_icon.png",
+                              width: soundIconSize,
+                              height: soundIconSize,
+                              fit: BoxFit.contain,
+                              alignment: Alignment.topRight,
+                            ),
                           ),
                         ),
                       ],
@@ -81,15 +86,15 @@ class _Step2Quiz1State extends State<Step2Quiz1> {
                 ],
               ),
               Container(
-                height: 40,
+                height: 70,
                 width: size.width,
-                color: Color.fromRGBO(255, 99, 0, 1.0),
-                padding: const EdgeInsets.fromLTRB(0,3,0,0),
+                color: Color.fromRGBO(217, 184, 184, 1),
+                padding: const EdgeInsets.fromLTRB(5,5,5,5),
                 child: Text(
                   'Kanda mu mashusho ari hasi aha agaragaza ibintu byinjiza amafaranga',
-                  textAlign: TextAlign.center,
+                  textAlign: TextAlign.left,
                   style: TextStyle(
-                      fontSize: 15,
+                      fontSize: defaultFontSize,
                       fontWeight: FontWeight.bold
                   ),
                 ),
@@ -121,6 +126,9 @@ class _Step2Quiz1State extends State<Step2Quiz1> {
                                       Expanded(
                                         child: InkWell(
                                           onTap: () {
+                                            var snackBar = SnackBar(content: Text('Ntago aribyo'));
+                                            // Step 3
+                                            ScaffoldMessenger.of(context).showSnackBar(snackBar);
                                           },
                                           child: Image.asset(
                                             'assets/images/airtime.png',
@@ -139,7 +147,7 @@ class _Step2Quiz1State extends State<Step2Quiz1> {
                                     onTap: () {
                                       final player = AudioCache();
                                       //player.play('audios/cat_1_lesson_1.mp3');
-                                      audioPlayer.play(AssetSource('audios/cat_1_lesson_1.mp3'));
+                                      audioPlayer.play(AssetSource('audios/airtime.mp3'));
                                     },
                                     child: Image.asset(
                                       "assets/images/sound_icon.png",
@@ -193,7 +201,7 @@ class _Step2Quiz1State extends State<Step2Quiz1> {
                                     onTap: () {
                                       final player = AudioCache();
                                       //player.play('audios/cat_1_lesson_2.mp3');
-                                      audioPlayer.play(AssetSource('audios/cat_1_lesson_1.mp3'));
+                                      audioPlayer.play(AssetSource('audios/amaturo.mp3'));
                                     },
                                     child: Image.asset(
                                       "assets/images/sound_icon.png",
@@ -253,7 +261,7 @@ class _Step2Quiz1State extends State<Step2Quiz1> {
                                     onTap: () {
                                       final player = AudioCache();
                                       //player.play('audios/cat_1_lesson_3.mp3');
-                                      audioPlayer.play(AssetSource('audios/cat_1_lesson_1.mp3'));
+                                      audioPlayer.play(AssetSource('audios/ibyihutirwa.mp3'));
                                       print(_wrong3);
                                     },
                                     child: Image.asset(
@@ -309,7 +317,7 @@ class _Step2Quiz1State extends State<Step2Quiz1> {
                                     onTap: () {
                                       final player = AudioCache();
                                       //player.play('audios/cat_1_lesson_4.mp3');
-                                      audioPlayer.play(AssetSource('audios/cat_1_lesson_1.mp3'));
+                                      audioPlayer.play(AssetSource('audios/gift.mp3'));
                                     },
                                     child: Image.asset(
                                       "assets/images/sound_icon.png",
@@ -368,7 +376,7 @@ class _Step2Quiz1State extends State<Step2Quiz1> {
                                     onTap: () {
                                       final player = AudioCache();
                                       //player.play('audios/cat_1_lesson_1.mp3');
-                                      audioPlayer.play(AssetSource('audios/cat_1_lesson_1.mp3'));
+                                      audioPlayer.play(AssetSource('audios/umurimo.mp3'));
                                     },
                                     child: Image.asset(
                                       "assets/images/sound_icon.png",
@@ -426,7 +434,7 @@ class _Step2Quiz1State extends State<Step2Quiz1> {
                                     onTap: () {
                                       final player = AudioCache();
                                       //player.play('audios/cat_1_lesson_2.mp3');
-                                      audioPlayer.play(AssetSource('audios/cat_1_lesson_1.mp3'));
+                                      audioPlayer.play(AssetSource('audios/ubukode.mp3'));
                                     },
                                     child: Image.asset(
                                       "assets/images/sound_icon.png",
@@ -485,7 +493,7 @@ class _Step2Quiz1State extends State<Step2Quiz1> {
                                     onTap: () {
                                       final player = AudioCache();
                                       //player.play('audios/cat_1_lesson_3.mp3');
-                                      audioPlayer.play(AssetSource('audios/cat_1_lesson_1.mp3'));
+                                      audioPlayer.play(AssetSource('audios/ibiribwa.mp3'));
                                     },
                                     child: Image.asset(
                                       "assets/images/sound_icon.png",
@@ -543,7 +551,7 @@ class _Step2Quiz1State extends State<Step2Quiz1> {
                                     onTap: () {
                                       final player = AudioCache();
                                       //player.play('audios/cat_1_lesson_4.mp3');
-                                      audioPlayer.play(AssetSource('audios/cat_1_lesson_1.mp3'));
+                                      audioPlayer.play(AssetSource('audios/amashanyarazi.mp3'));
                                     },
                                     child: Image.asset(
                                       "assets/images/sound_icon.png",
@@ -602,7 +610,7 @@ class _Step2Quiz1State extends State<Step2Quiz1> {
                                     onTap: () {
                                       final player = AudioCache();
                                       //player.play('audios/cat_1_lesson_3.mp3');
-                                      audioPlayer.play(AssetSource('audios/cat_1_lesson_1.mp3'));
+                                      audioPlayer.play(AssetSource('audios/school.mp3'));
                                     },
                                     child: Image.asset(
                                       "assets/images/sound_icon.png",
@@ -660,7 +668,7 @@ class _Step2Quiz1State extends State<Step2Quiz1> {
                                     onTap: () {
                                       final player = AudioCache();
                                       //player.play('audios/cat_1_lesson_4.mp3');
-                                      audioPlayer.play(AssetSource('audios/cat_1_lesson_1.mp3'));
+                                      audioPlayer.play(AssetSource('audios/selling.mp3'));
                                     },
                                     child: Image.asset(
                                       "assets/images/sound_icon.png",
@@ -684,6 +692,64 @@ class _Step2Quiz1State extends State<Step2Quiz1> {
                               ],
                             ),
                           ),
+                          Card(
+                            elevation: 0,
+                            shape: new RoundedRectangleBorder(
+                                borderRadius: new BorderRadius.circular(15.0)
+                            ),
+                            color: Colors.transparent,
+                            margin: EdgeInsets.all(7.0),
+                            child: Stack(
+                              children: [
+                                Container(
+                                  child: Column(
+                                    children: [
+                                      const SizedBox(height: 5),
+                                      Expanded(
+                                        child: InkWell(
+                                          onTap: () {
+                                          },
+                                          child: Image.asset(
+                                            'assets/images/burnhouse.png',
+                                            fit: BoxFit.contain,
+                                            width: MediaQuery.of(context).size.width,
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                Container(
+                                  alignment: Alignment.bottomRight,
+                                  padding: EdgeInsets.all(2.0),
+                                  child: InkWell(
+                                    onTap: () {
+                                      final player = AudioCache();
+                                      //player.play('audios/cat_1_lesson_4.mp3');
+                                      audioPlayer.play(AssetSource('audios/ubwishingizi.mp3'));
+                                    },
+                                    child: Image.asset(
+                                      "assets/images/sound_icon.png",
+                                      width: 40,
+                                      height: 40,
+                                    ),
+                                  ),
+                                ),
+                                Container(
+                                  alignment: Alignment.topRight,
+                                  padding: EdgeInsets.all(2.0),
+                                  child: Visibility(
+                                    visible: true,
+                                    child: Image.asset(
+                                      "assets/icons/false.png",
+                                      width: 40,
+                                      height: 40,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
                         ],
                       ),
                     )
@@ -691,6 +757,7 @@ class _Step2Quiz1State extends State<Step2Quiz1> {
                 ),
               ),
               Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Container(
                     alignment: Alignment.topLeft,
@@ -703,8 +770,8 @@ class _Step2Quiz1State extends State<Step2Quiz1> {
                       },
                       child: Image.asset(
                         "assets/icons/previous.png",
-                        width: 80,
-                        height: 80,
+                        width: iconsNavigation,
+                        height: iconsNavigation,
                       ),
                     ),
                   ),
@@ -721,8 +788,8 @@ class _Step2Quiz1State extends State<Step2Quiz1> {
                         },
                         child: Image.asset(
                           "assets/icons/cancel.png",
-                          width: 80,
-                          height: 80,
+                          width: iconsNavigation,
+                          height: iconsNavigation,
                         ),
                       ),
                     ),
@@ -735,12 +802,19 @@ class _Step2Quiz1State extends State<Step2Quiz1> {
                     margin: const EdgeInsets.only(left: 50),
                     child: InkWell(
                       onTap: () {
-
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) {
+                              return Step2Quiz2();
+                            },
+                          ),
+                        );
                       },
                       child: Image.asset(
                         "assets/icons/next.png",
-                        width: 80,
-                        height: 80,
+                        width: iconsNavigation,
+                        height: iconsNavigation,
                       ),
                     ),
                   ),
